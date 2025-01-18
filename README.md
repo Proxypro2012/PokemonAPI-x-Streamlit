@@ -1,3 +1,6 @@
+PokemonAPI x Streamlit 
+v2.?
+
 All credit goes to [PokeAPI](https://pokeapi.co/) for their API. The base script can be found in the API.py file. 
 The Streamlit x API is located in main.py
 
