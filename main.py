@@ -3,6 +3,8 @@ import streamlit as st
 
 
 
+st.title("Pokemon API App")
+
 
 base_url = "https://pokeapi.co/api/v2/"
 
