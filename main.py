@@ -4,6 +4,7 @@ import time
 
 
 
+
 st.title("Pokémon API App")
 
 
@@ -23,7 +24,38 @@ def get_pokemon_info(name):
 
 
 
-pokemon_name = st.text_input("Enter a Pokémon name:").strip().lower()
+def get_all_pokemon():
+    url = "https://pokeapi.co/api/v2/pokemon?limit=10000"  # Limit is set to a high number as the total count exceeds 1000
+    response = requests.get(url)
+    data = response.json()
+    pokemon_list = [pokemon['name'] for pokemon in data['results']]
+    return pokemon_list
+
+
+pokemon_names = get_all_pokemon()
+
+
+
+
+
+pokemon_names.append("all")
+
+
+pokemon_name = st.selectbox(
+    "Enter a Pokemon name: ",
+    (pokemon_names),
+    index=None,
+    placeholder="Type here...",
+)
+
+
+
+
+
+if pokemon_name == "all":
+    st.subheader("All Pokemon Names: ")
+    for name in pokemon_names:
+     st.write(str(name).capitalize())
 
 if st.button("Tips"):
     st.info("This site was made by Kabir Tiwari :)")
