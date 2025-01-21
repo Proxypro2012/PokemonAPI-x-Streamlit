@@ -4,6 +4,8 @@ import time
 
 
 
+col1, col2 = st.columns(2)
+
 
 st.title("Pokémon API App")
 
@@ -67,6 +69,7 @@ if st.button("Tips"):
 if pokemon_name:
     pokemon_info = get_pokemon_info(pokemon_name)
     if pokemon_info:
+       with col1 
         st.write(f"Name: {pokemon_info.get('name').capitalize()}")
         st.write(f"Id: {pokemon_info['id']}")
         st.write(f"Height: {pokemon_info['height']}")
@@ -75,6 +78,7 @@ if pokemon_name:
         types = [t['type']['name'] for t in pokemon_info['types']]
         st.write(f"Types: {', '.join(types)}")
         st.write(f"Abilities: {', '.join(abilities)}")
+       with col2 
         image_url = pokemon_info['sprites']['front_default']
         st.image(image_url, caption=f"{pokemon_info.get('name').capitalize()}", width=250)
     else:
