@@ -37,7 +37,7 @@ pokemon_names = get_all_pokemon()
 
 
 
-pokemon_names.remove(pokemon_names[-1)
+pokemon_names.remove(pokemon_names[-1])
 
 
 
