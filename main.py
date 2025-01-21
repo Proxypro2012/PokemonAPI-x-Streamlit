@@ -37,14 +37,14 @@ pokemon_names = get_all_pokemon()
 
 
 
-
+pokemon_names.append("all")
 
 
 
 
 pokemon_name = st.selectbox(
     "Enter a Pokemon name: ",
-    (pokemon_names, "all"),
+    (pokemon_names),
     index=None,
     placeholder="Type here...",
 )
