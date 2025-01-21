@@ -3,11 +3,12 @@ import streamlit as st
 import time
 
 
+st.title("Pokémon API App")
+
+
 
 col1, col2 = st.columns(2)
 
-
-st.title("Pokémon API App")
 
 
 
