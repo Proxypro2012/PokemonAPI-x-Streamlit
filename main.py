@@ -7,8 +7,6 @@ st.title("Pokémon API App")
 
 
 
-col1, col2 = st.columns(2)
-
 
 
 
@@ -52,6 +50,8 @@ pokemon_name = st.selectbox(
 )
 
 
+
+col1, col2 = st.columns(2)
 
 
 
