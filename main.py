@@ -57,7 +57,7 @@ col1, col2 = st.columns(2)
 
 if pokemon_name == "all":
     st.subheader("All Pokemon Names: ")
-    for name in pokemon_names:
+    for name in pokemon_names[-1]:
      st.write(str(name).capitalize())
 
 if st.button("Tips"):
